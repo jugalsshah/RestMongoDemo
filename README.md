@@ -1,3 +1,3 @@
-# RestMongoDemo
-Simple Example of RestfulWebservice with MongoDB
+# MongoDB & REST 
+Introduction to MongoDB with REST
 
