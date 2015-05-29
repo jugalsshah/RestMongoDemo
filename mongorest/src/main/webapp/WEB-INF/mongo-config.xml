@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/data/mongo 
+ 						http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd 
+ 						http://www.springframework.org/schema/beans 
+ 						http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+ 						">
+
+	
+	<bean id="userservice" class="com.restdemo.service.UserserviceImpl"> 
+		
+		<property name="mongoTemplate" ref="mongoTemplate"/>
+	 </bean >
+
+
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg name="mongo" ref="mongo" />
+		<constructor-arg name="databaseName" value="userInfo" />
+
+	</bean>
+	<!-- Factory bean that creates the Mongo instance -->
+	
+	<bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
+		<property name="host" value="localhost" />
+		<property name="port" value="27017" />
+	</bean>
+	<!-- For consider the using of annotations foe defining Spring Bean -->
+	
+
+	<!-- For defining Spring Bean -->
+	
+
+</beans>

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: mongorest
+Bundle-SymbolicName: mongorest
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.restdemo.component,
+ com.restdemo.controller,
+ com.restdemo.model,
+ com.restdemo.service
+Require-Bundle: mongorest
+Import-Package: com.restdemo.model,
+ com.restdemo.service
